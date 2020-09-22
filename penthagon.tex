@@ -1,0 +1,16 @@
+\RequirePackage{shellesc}
+\RequirePackage{pdftexcmds}
+%cspell:disable
+\makeatletter
+  \let\pdfshellescape\pdf@shellescap
+\makeatother
+\RequirePackage{luatex85}
+\documentclass[tikz,preview,11pt]{standalone}
+\include{packages}
+\usepackage{graphicx}
+\usetikzlibrary{shapes, arrows}
+\begin{document}
+\begin{tikzpicture}
+	\node[regular polygon, regular polygon sides=5, draw] (p1) {}; %Faces do dodecaedro
+\end{tikzpicture}
+\end{document}
