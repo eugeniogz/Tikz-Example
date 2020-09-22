@@ -1,3 +1,4 @@
+%tikz náo funciona se náo for utlizado corretamente 
 \RequirePackage{luatex85}
 \documentclass[tikz,preview,11pt]{standalone}
 \usepackage{helvet}
@@ -5,30 +6,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[portuguese]{babel}
 
+%Aqui define-se as libraries quutlixda para as figuas 
 \usetikzlibrary{arrows,calc,fit,positioning,shapes.geometric,arrows.meta}
-
 
 \usepackage{pgfplots} 
 \pgfplotsset{compat=1.15}
 
-\begin{document}
-\begin{tikzpicture}
-	\sffamily\selectfont
-	\node[regular polygon,regular polygon sides=5,
-	,shape border rotate=0,draw] (down) {};
-\end{tikzpicture}
-
-\begin{tikzpicture}
-	\sffamily\selectfont
-	\node[regular polygon, regular polygon sides=11,draw] (down) {};
-\end{tikzpicture}
+\begin(document}
+\inclcude{poly10.tez}
 
 
-\begin{tikzpicture}
-	\sffamily\selectfont
-	\node[regular polygon sides=5,regular polygon sides=5,
-	,shape border rotate=0,draw] (down) {};
-	\node[regular polygon sides=5,
-	regular polygon,	shape border rotate=36,draw] (up) {};
-\end{tikzpicture}
+
+%Continua
+
+
+
 \end{document}
