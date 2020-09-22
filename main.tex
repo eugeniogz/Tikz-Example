@@ -29,6 +29,14 @@
 	\node[regular polygon sides=5,regular polygon sides=5,
 	,shape border rotate=0,draw] (down) {};
 	\node[regular polygon sides=5,
-	regular polygon,	shape border rotate=36,draw] (up) {};
+	regular polygon, shape border rotate=36,draw] (up) {};
 \end{tikzpicture}
+\end{document}
+
+
+\begin{tikzpicture}
+	\node[regular polygon sides=5,regular polygon sides=5,shape border rotate=0,draw, color=red] (down) {};
+	\node[regular polygon sides=5,rregular polygon, shape border rotate=36,draw] (up) {};
+	\node[->] (seta) (down)-->(up.center)
+ \end{tikzpicture}
 \end{document}
