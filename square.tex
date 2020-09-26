@@ -1,0 +1,16 @@
+\RequirePackage{shellesc}
+\RequirePackage{pdftexcmds}
+%cspell:disable
+\makeatletter
+  \let\pdfshellescape\pdf@shellescap
+\makeatother
+\RequirePackage{luatex85}
+\documentclass[tikz,preview,11pt]{standalone}
+\include{packages}
+\usepackage{graphicx}
+\usetikzlibrary{shapes, arrows}
+\begin{document}
+\begin{tikzpicture} 
+	\node[draw] {}; %Faces do cubo, valores default
+\end{tikzpicture}
+\end{document}

@@ -13,6 +13,17 @@
 \usetikzlibrary{arrows,calc,fit,positioning,shapes.geometric,arrows.meta}
 \usepackage{pgfplots} 
 \pgfplotsset{compat=1.15}
+RequirePackage{shellesc}
+\RequirePackage{pdftexcmds}
+%cspell:disable
+\makeatletter
+  \let\pdfshellescape\pdf@shellescap
+\makeatother
+\RequirePackage{luatex85}
+\documentclass[article,11pt]{standalone}
+\include{packages}
+\usepackage{graphicx}
+%\usepackage{tikz} = desnecessário aqqui porque porque o documento é da classe Tikz
 
 
 \begin{document}
@@ -33,8 +44,14 @@
 	regular polygon, shape border rotate=36,draw] (up) {};
 \end{tikzpicture}
 
-\beog
+\sffamily\selectfont
+%This documents shows basic concepts of drawnnig use the Tikz library
+%Example  of polygons: triangle, cube and pentagon, starredd  
+	
 
+\include{triangle)
+\inckuded{star}
+
+
+Alguns elementos foram elaborados com a ajuda do site\footnote{\url{https://tex.stackexchange.com/}}
 \end{document}
-
-
