@@ -5,21 +5,35 @@
   \let\pdfshellescape\pdf@shellescap
 \makeatother
 \RequirePackage{luatex85}
-\documentclass[article,11pt]{standalone}
+\documentclass[
+  11pt,				% tamanho da fonte
+  oneside,			% para impressão apenas na frente oneside. 
+  a4paper,			% tamanho do papel. 
+  %twocolumn,          % remover para uma coluna (ver outros 2 comentários)
+  % -- opções da classe abntex2 --
+  chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas, 
+              % Foi alterada a fonte diretamente no setup.tex redefinindo ABNTEXchapterfontsize e ABNTEXchapterfont
+  %section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+  %subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+  %subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+  % -- opções do pacote babel --
+  sumario=tradicional,
+  pdfencoding=unicode,
+  psdextra,
+  english,			% idioma adicional para hifenização
+  brazil				% o último idioma é o principal do documento
+]{abntex2}
+
+
 \include{packages}
 \usepackage{graphicx}
-%\usepackage{tikz} = desnecessário aqqui porque porque o documento é da classe Tikz 
+\usepackage{url}
 
 
 \begin{document}
 \sffamily\selectfont
-%Tis documents shows basic concepts of drawnnig use the Tikz library
-%Example  of polygons: triangle, cube and pentagon
-	
-
-\include{triangle)
-%\inckuded{stars}
-
-
-Alguns elementos foram elaborados com a ajuda do site\footnote{\url{https://tex.stackexchange.com/}}
+Alguns elementos foram elaborados com a ajuda do site Stackexchange\footnote{\url{https://tex.stackexchange.com/}}
+\begin{figure}[ht!]
+\includegraphics[width=1\linewidth]{triangle}
+\end{figure}
 \end{document}

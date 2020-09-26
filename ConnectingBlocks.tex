@@ -1,0 +1,20 @@
+\RequirePackage{shellesc}
+\RequirePackage{pdftexcmds}
+%cspell:disable
+\makeatletter
+  \let\pdfshellescape\pdf@shellescap
+\makeatother
+\RequirePackage{luatex85}
+\documentclass[tikz,preview,6pt]{standalone}
+\include{packages}
+\usepackage{graphicx}
+\usetikzlibrary{shapes, arrows}
+\begin{document}
+\begin{tikzpicture}
+    \sffamily\small\selectfont
+	\node[regular polygon, regular polygon sides=3, draw, fill=red,color=red,minimum size=15cm] (c) {};
+	\node[above=8cm of c.southwest] (LIBERTAS1) {LIBERTAS};
+	\node[aboce=8cm of c.southwest] (elaborar) {QUAE SERA};
+    \node[below=8cm of c.south] (tamen) {TAMEN};
+\end{tikzpicture}
+\end{document}
