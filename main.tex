@@ -1,4 +1,19 @@
-\RequirePackage{shellesc}
+%tikz náo funciona se náo for utlizado o luaTex
+\RequirePackage{luatex85}
+
+%documento vai gerar um pdf como todos elementos Tikz definidos
+\documentclass[tikz,preview,11pt]{standalone}
+
+%Confguração de fonntes e linguagem
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+%Aqui define-se as libraries quutlixda para as figuas 
+\usetikzlibrary{arrows,calc,fit,positioning,shapes.geometric,arrows.meta}
+\usepackage{pgfplots} 
+\pgfplotsset{compat=1.15}
+RequirePackage{shellesc}
 \RequirePackage{pdftexcmds}
 %cspell:disable
 \makeatletter
@@ -8,17 +23,34 @@
 \documentclass[article,11pt]{standalone}
 \include{packages}
 \usepackage{graphicx}
-%\usepackage{tikz} = desnecessário aqqui porque porque o documento é da classe Tikz 
+%\usepackage{tikz} = desnecessário aqqui porque porque o documento é da classe Tikz
 
 
 \begin{document}
+\begin{tikzpicture}
+	\node[regular polygon,regular polygon sides=5,
+	,shape border rotate=0,draw] (down) {};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[regular polygon, regular polygon sides=11,draw] (down) {};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\sffamily\selectfont
+	\node[regular polygon sides=5,regular polygon sides=5,
+	,shape border rotate=0,draw] (down) {};
+	\node[regular polygon sides=5,
+	regular polygon, shape border rotate=36,draw] (up) {};
+\end{tikzpicture}
+
 \sffamily\selectfont
-%Tis documents shows basic concepts of drawnnig use the Tikz library
-%Example  of polygons: triangle, cube and pentagon
+%This documents shows basic concepts of drawnnig use the Tikz library
+%Example  of polygons: triangle, cube and pentagon, starredd  
 	
 
 \include{triangle)
-%\inckuded{stars}
+\inckuded{star}
 
 
 Alguns elementos foram elaborados com a ajuda do site\footnote{\url{https://tex.stackexchange.com/}}
